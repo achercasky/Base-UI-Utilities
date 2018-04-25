@@ -1,6 +1,8 @@
-package com.achercasky.base.ui;
+package com.achercasky.base.ui.test;
 
 import android.view.View;
+
+import com.achercasky.base.ui.LayoutViewUtils;
 
 /**
  * Created by achercasky on 14/03/2018.
@@ -50,12 +52,6 @@ public class LayoutStateManager {
         public Builder setNoConnectionLayout(final View noConnectionLayout) {
             this.noConnectionLayout = noConnectionLayout;
             utils.setNoConnectionLayout(noConnectionLayout);
-            return this;
-        }
-
-        public Builder test(final int noConnectionLayout) {
-//            this.noConnectionLayout = noConnectionLayout;
-            utils.setMainLayout(noConnectionLayout);
             return this;
         }
 

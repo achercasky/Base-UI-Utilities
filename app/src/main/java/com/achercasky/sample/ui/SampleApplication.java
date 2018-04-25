@@ -17,6 +17,7 @@ public class SampleApplication extends Application {
         LayoutStateManager.init()
 //                .setEmptyLayout(1)
                 .setNoConnectionLayout(new SampleView(getApplicationContext()))
+                .test(R.layout.item_near_venues)
                 .create();
     }
 }

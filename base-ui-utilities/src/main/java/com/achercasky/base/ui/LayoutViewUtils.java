@@ -12,6 +12,8 @@ public class LayoutViewUtils {
 
     private View noConnectionLayout;
 
+    private int mainLayout;
+
     public static LayoutViewUtils getInstance() {
         return INSTANCE;
     }
@@ -22,5 +24,13 @@ public class LayoutViewUtils {
 
     public View getNoConnectionLayout() {
         return noConnectionLayout;
+    }
+
+    public int getMainLayout() {
+        return mainLayout;
+    }
+
+    public void setMainLayout(int mainLayout) {
+        this.mainLayout = mainLayout;
     }
 }
