@@ -5,14 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-import com.achercasky.base.ui.LayoutStateView;
+import com.achercasky.base.ui.state.StateLayout;
 import com.achercasky.base.ui.test.StateLayoutView;
-import com.achercasky.base.ui.utils.State;
 import com.achercasky.sample.ui.fragments.HomeFragment;
 
 public class HomeActivity extends AppCompatActivity {

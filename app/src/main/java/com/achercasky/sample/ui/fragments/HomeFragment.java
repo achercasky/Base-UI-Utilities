@@ -6,14 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.achercasky.base.ui.state.StateLayout;
 import com.achercasky.sample.ui.R;
 
 /**
  * Created by achercasky on 21/03/2018.
  */
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment implements StateLayout.Listener {
 
     @Nullable
     @Override
@@ -27,5 +29,15 @@ public class HomeFragment extends Fragment {
 
 
 
+    }
+
+    @Override
+    public void onRetry() {
+        Toast.makeText(getActivity(), "It works!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public StateLayout.Listener getStates() {
+        return this;
     }
 }

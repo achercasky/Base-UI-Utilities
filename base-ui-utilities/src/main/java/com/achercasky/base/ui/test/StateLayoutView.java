@@ -7,10 +7,12 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.IntDef;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.achercasky.base.ui.LayoutViewUtils;
 import com.achercasky.base.ui.R;
@@ -73,9 +75,9 @@ public class StateLayoutView extends FrameLayout {
     }
 
     private void init() {
-        final LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(LayoutViewUtils.getInstance().getMainLayout(), this, true);
-        setVisibility(GONE);
+//        final LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        inflater.inflate(LayoutViewUtils.getInstance().getMainLayout(), this, true);
+//        setVisibility(GONE);
     }
 
     /**
@@ -84,6 +86,7 @@ public class StateLayoutView extends FrameLayout {
      */
     public void setContentLayout(final View contentLayout) {
         this.mContentLayout = contentLayout;
+        setVisibility(GONE);
     }
 
     @SuppressWarnings("checkstyle:indentation")
@@ -117,8 +120,10 @@ public class StateLayoutView extends FrameLayout {
                 break;
 
             case NETWORK_ERROR_LAYOUT:
-                setVisibility(VISIBLE);
-                LayoutViewUtils.getInstance().getNoConnectionLayout().setVisibility(VISIBLE);
+                showErrorView(LayoutViewUtils.getInstance().getNoConnectionLayout());
+//                setVisibility(VISIBLE);
+//                LayoutViewUtils.getInstance().getNoConnectionLayout().setVisibility(VISIBLE);
+//                processLayoutVisibility( LayoutViewUtils.getInstance().getNoConnectionLayout(), false);
 //                showErrorView(spinnerContainer, spinner, mErrorView, R.string.sdk_error_connectivity_title,
 //                        R.string.sdk_error_connectivity_subtitle, R.drawable.sdk_error_view_network, mErrorListener);
                 break;
@@ -143,6 +148,26 @@ public class StateLayoutView extends FrameLayout {
 //        mErrorView.setImage(image);
 //        mErrorView.setButton(R.string.sdk_error_view_button_label, mErrorListener);
 //    }
+
+    private void showErrorView(final View spinnerContainer) {
+//        processLayoutVisibility(this, true);
+//        spinner.stop();
+
+//        spinnerContainer.setLayoutParams(new LinearLayout.LayoutParams(800, 200));
+        spinnerContainer.setVisibility(View.VISIBLE);
+//        spinnerContainer.setMinimumHeight(200);
+
+        Log.d("PRUEBA2", String.valueOf(spinnerContainer.getHeight()));
+        Log.d("PRUEBA2", String.valueOf(spinnerContainer.getWidth()));
+        Log.d("PRUEBA2", String.valueOf(spinnerContainer.getMeasuredHeight()));
+        Log.d("PRUEBA2", String.valueOf(spinnerContainer.getMeasuredWidth()));
+//        mErrorView.setVisibility(VISIBLE);
+
+//        mErrorView.setTitle(title);
+//        mErrorView.setSubtitle(subtitle);
+//        mErrorView.setImage(image);
+//        mErrorView.setButton(R.string.sdk_error_view_button_label, mErrorListener);
+    }
 
     /**
      * Set a listener to handle the button
