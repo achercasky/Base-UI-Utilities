@@ -15,7 +15,7 @@ import com.achercasky.sample.ui.R;
  * Created by achercasky on 21/03/2018.
  */
 
-public class HomeFragment extends BaseFragment implements StateLayout.Listener {
+public class HomeFragment extends BaseFragment {
 
     @Nullable
     @Override

@@ -11,7 +11,7 @@ import com.achercasky.sample.ui.SampleStateLayoutActivity;
  * Created by achercasky on 01/05/2018.
  */
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements StateLayout.Listener{
 
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {

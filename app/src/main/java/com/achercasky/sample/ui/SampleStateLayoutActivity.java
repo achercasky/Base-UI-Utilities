@@ -41,11 +41,6 @@ public class SampleStateLayoutActivity extends AppCompatActivity {
         // Commit the transaction
         transaction.commit();
 
-//        final LayoutStateView stateView = findViewById(R.id.stateView);
-
-//        mStatefulLayout.setStateView(STATE_CUSTOM, LayoutInflater.from(this).inflate(R.layout.custom_state, null));
-
-
         ((Button) findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
