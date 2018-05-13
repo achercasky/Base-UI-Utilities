@@ -41,5 +41,10 @@ public abstract class BaseFragment extends Fragment implements StateLayout.Liste
         Toast.makeText(getActivity(), "It works!", Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void showProgressLayout() {
+        
+    }
+
     public abstract StateLayout.Listener getStates();
 }

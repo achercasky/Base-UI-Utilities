@@ -211,5 +211,6 @@ public class StateLayout extends FrameLayout {
         void showMainLayout();
         void showNetworkError();
         void showEmptyLayout();
+        void showProgressLayout();
     }
 }
