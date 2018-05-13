@@ -3,6 +3,7 @@ package com.achercasky.sample.ui.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,12 +33,14 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
-    public void onRetry() {
-        Toast.makeText(getActivity(), "It works!", Toast.LENGTH_LONG).show();
+    public StateLayout.Listener getStates() {
+        return this;
     }
 
     @Override
-    public StateLayout.Listener getStates() {
-        return this;
+    public void onResume() {
+        super.onResume();
+
+        Log.d("Paso", "onResume()");
     }
 }

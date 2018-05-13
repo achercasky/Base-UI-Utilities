@@ -207,6 +207,9 @@ public class StateLayout extends FrameLayout {
     }
 
     public interface Listener {
-        void onRetry();
+        void showRetryLayout();
+        void showMainLayout();
+        void showNetworkError();
+        void showEmptyLayout();
     }
 }
