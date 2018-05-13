@@ -55,7 +55,7 @@ public class NoConnectionView extends FrameLayout {
         retry.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View v) {
-                listener.onRetry();
+                listener.showRetryLayout();
             }
         });
     }
