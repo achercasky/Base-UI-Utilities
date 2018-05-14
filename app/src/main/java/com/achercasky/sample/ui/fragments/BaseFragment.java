@@ -43,7 +43,7 @@ public abstract class BaseFragment extends Fragment implements StateLayout.Liste
 
     @Override
     public void showProgressLayout() {
-        
+
     }
 
     public abstract StateLayout.Listener getStates();

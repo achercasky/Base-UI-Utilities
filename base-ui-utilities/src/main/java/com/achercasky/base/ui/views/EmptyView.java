@@ -49,12 +49,15 @@ public class EmptyView extends FrameLayout {
         container = findViewById(R.id.container_no_internet);
 
         final Button retry = findViewById(R.id.ui_no_connection_btn);
-        retry.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-                callback.onRetry();
-            }
-        });
+
+        if(retry != null) {
+            retry.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(final View v) {
+                    callback.onRetry();
+                }
+            });
+        }
     }
 
     public void display() {
